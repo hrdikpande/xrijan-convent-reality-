@@ -5,49 +5,47 @@ import { motion } from "framer-motion";
 export function AnimatedBackground() {
     return (
         <div className="fixed inset-0 z-0 pointer-events-none">
-            {/* Dot Pattern - Stronger */}
-            <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.3]" />
+            <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:28px_28px] opacity-[0.2]" />
 
-            {/* Moving Gradient Orbs - significantly stronger colors */}
             <motion.div
                 animate={{
-                    scale: [1, 1.2, 1],
+                    scale: [1, 1.15, 1],
                     rotate: [0, 90, 0],
-                    opacity: [0.5, 0.8, 0.5]
+                    opacity: [0.35, 0.55, 0.35]
                 }}
                 transition={{
-                    duration: 20,
+                    duration: 26,
                     repeat: Infinity,
                     ease: "linear"
                 }}
-                className="absolute top-[-20%] left-[-10%] w-[70vw] h-[70vw] rounded-full bg-gradient-to-br from-indigo-400/30 via-purple-300/30 to-blue-400/30 blur-[120px] mix-blend-multiply"
+                className="absolute top-[-20%] left-[-10%] w-[70vw] h-[70vw] rounded-full bg-gradient-to-br from-blue-300/25 via-indigo-200/20 to-slate-200/30 blur-[140px] mix-blend-multiply"
             />
 
             <motion.div
                 animate={{
-                    scale: [1, 1.3, 1],
+                    scale: [1, 1.2, 1],
                     x: [0, -100, 0],
-                    opacity: [0.5, 0.8, 0.5]
+                    opacity: [0.3, 0.5, 0.3]
                 }}
                 transition={{
-                    duration: 25,
+                    duration: 28,
                     repeat: Infinity,
                     ease: "linear"
                 }}
-                className="absolute bottom-[-10%] right-[-10%] w-[60vw] h-[60vw] rounded-full bg-gradient-to-tl from-teal-300/30 via-emerald-200/30 to-cyan-300/30 blur-[120px] mix-blend-multiply"
+                className="absolute bottom-[-10%] right-[-10%] w-[60vw] h-[60vw] rounded-full bg-gradient-to-tl from-emerald-200/20 via-cyan-200/20 to-blue-200/20 blur-[140px] mix-blend-multiply"
             />
 
             <motion.div
                 animate={{
                     y: [0, -50, 0],
-                    opacity: [0.4, 0.7, 0.4]
+                    opacity: [0.25, 0.45, 0.25]
                 }}
                 transition={{
-                    duration: 15,
+                    duration: 18,
                     repeat: Infinity,
                     ease: "easeInOut"
                 }}
-                className="absolute top-[40%] left-[30%] w-[40vw] h-[40vw] rounded-full bg-pink-300/30 blur-[120px] mix-blend-multiply"
+                className="absolute top-[40%] left-[30%] w-[40vw] h-[40vw] rounded-full bg-slate-300/20 blur-[140px] mix-blend-multiply"
             />
         </div>
     )
